@@ -1368,7 +1368,7 @@ label {
         position: relative
     }
 
-    .site-header::before {
+    .site-headers::before {
         content: '';
         position: absolute;
         top: 0;
