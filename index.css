@@ -158,3 +158,17 @@ span:hover{
   padding-left: 150px;
   margin-top: -49px;
 }
+
+.img{
+  position: relative;
+  top: -16px;
+  height: 26px;
+  font-size: 29px;
+  color: #ff9046;
+}
+.img1{
+  position: absolute;
+  top: 38px;
+  font-size: 15px;
+  color: #e05959;
+}
