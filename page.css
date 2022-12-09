@@ -164,7 +164,7 @@ span:hover{
     position: relative;
     width: 100%;
     height: 380px;
-    background: #1c2e41;
+    background: #141c24;
     border: 2px solid #fa1a1a;
     border-radius: 0px 0px 5px 5px;
 }
@@ -183,14 +183,16 @@ span:hover{
     color: #ffffff;
     font-weight: 600;
     font-size: 16px;
-    cursor:pointer;
     margin-bottom: -2px;
     display: block;
     text-align: center;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    cursor: default;
 }
-.img, .image, .img1, .number, .footer-links, .list-reset, .buttonn, .buttonn:hover, .css-info {
+
+
+.img, .nplay, .image, .img1, .number, .footer-links, .list-reset, .buttonn, .buttonn:hover, .css-info, .buttonns {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
