@@ -4,6 +4,8 @@ from rich import print; from rich.console import Console; cn = Console();
 from rich.traceback import install
 import easygui
 import requests
+import pathlib
+from pathlib import Path
 
 R = '[bold red]'     # 🔴| Красный
 Q = '[bold #E32636]' # 🔴| Ярко красный
@@ -16,6 +18,7 @@ I = '[bold yellow]'  # 🟡| Светло жёлтый
 E = '[bold #808080]' # ⚙️| Сервый
 
 IA = '                              '
+TAB ='    '
 TAG1 = ['0+','6+','12+','16+','18+']
 TAG2 = ['0', '6', '12', '16', '18']
 
@@ -26,20 +29,20 @@ num = 0
 for dirpath, dirnames, filenames in os.walk("./page"):
     for dirname in dirnames:
         num += 1
+PAGE = num
 nun = f'{num}      '
-num += 1
 
 class app:
     _1_Print  = f'{R}┌────────────────────────────────────{E} Панель разработчка {R}─{R}{R}┐'
     _2_Print  = f'{R}│{W} Папок: {Y}{nun}                                         {W}{R}{R}│'
     _3_Print  = f'{R}└─────────────────────────────────────────────────────────{R}{R}{R}{R}┘'
-    _0_Input  = f'{IA} Нажмите Enter что-бы начать настройку                    '
+    _0_Input  = f'{IA} Нажмите {D}Enter {W}что-бы начать настройку                    '
 
     _11_Print = f'{R}┌────────────────────────────────────────────{E} Коментарий {R}─{R}{R}┐'
     _12_Print = f'{R}│{I} Доступные значения: {G}Любой текст                         {R}{R}│'
     _13_Print = f'{R}│{E} └{Q} Требуется обязательно!                                {R}{R}│'
     _14_Print = f'{R}└─────────────────────────────────────────────────────────{R}{R}{R}{R}┘'
-    _1_Name   = f'{IA}{B} Название фильма'
+    _1_Name   = f'{IA}{B} Название'
     _1_Input  = f'{IA}{E} └ {I}Значение: '
 
     _21_Print = f'{R}┌────────────────────────────────────────────{E} Коментарий {R}─{R}{R}┐'
@@ -50,7 +53,7 @@ class app:
     _2_Input  = f'{IA}{E} └ {I}Значение: '
 
     _31_Print = f'{R}┌────────────────────────────────────────────{E} Коментарий {R}─{R}{R}┐'
-    _32_Print = f'{R}│{I} Доступные значения: {G}1.Файл, 2.Ссылка                    {R}{R}│'
+    _32_Print = f'{R}│{I} Доступные значения: {G}https://example.com                 {R}{R}│'
     _33_Print = f'{R}│{E} └{Q} Требуется обязательно!                                {R}{R}│'
     _34_Print = f'{R}└─────────────────────────────────────────────────────────{R}{R}{R}{R}┘'
     _3_Name   = f'{IA}{B} Изображение'
@@ -71,118 +74,142 @@ class app:
     _5_Name   = f'{IA}{B} URL Видео'
     _5_Input  = f'{IA}{E} └ {I}Значение: '
 
-
-Pr_App = (
-    app._1_Print + '\n' +
-    app._2_Print + '\n' +
-    app._3_Print
-    )
-Pr_1   = (
-    app._11_Print + '\n' +
-    app._12_Print + '\n' +
-    app._13_Print + '\n' +
-    app._14_Print
-    )
-Pr_2   = (
-    app._21_Print + '\n' +
-    app._22_Print + '\n' +
-    app._23_Print + '\n' +
-    app._24_Print
-    )
-Pr_3   = (
-    app._31_Print + '\n' +
-    app._32_Print + '\n' +
-    app._33_Print + '\n' +
-    app._34_Print
-    )
-Pr_4   = (
-    app._41_Print + '\n' +
-    app._42_Print + '\n' +
-    app._43_Print + '\n' +
-    app._44_Print
-    )
-Pr_5   = (
-    app._51_Print + '\n' +
-    app._52_Print + '\n' +
-    app._53_Print + '\n' +
-    app._54_Print
-    )
-
-    
+Pr_App = (app._1_Print  + '\n' + app._2_Print  + '\n' + app._3_Print)
+Pr_1   = (app._11_Print + '\n' + app._12_Print + '\n' + app._13_Print + '\n' + app._14_Print); Имя = ''; Имя1 = f'{B}-'
+Pr_2   = (app._21_Print + '\n' + app._22_Print + '\n' + app._23_Print + '\n' + app._24_Print); Возраст = ''; Возраст1 = f'{B}-'
+Pr_3   = (app._31_Print + '\n' + app._32_Print + '\n' + app._33_Print + '\n' + app._34_Print); Изображение = ''; Изображение1 = f'{B}-'
+Pr_4   = (app._41_Print + '\n' + app._42_Print + '\n' + app._43_Print + '\n' + app._44_Print); Кнопка = ''; Кнопка1 = f'{B}-'; Button = ''
+Pr_5   = (app._51_Print + '\n' + app._52_Print + '\n' + app._53_Print + '\n' + app._54_Print); Видео = ''; Видео1 = f'{B}-'
+ 
 cn.print(Pr_App, justify="center")
 cn.input(app._0_Input, password=True)
+os.system('cls')
 cn.print()
-
-
-Имя = ''
+cn.print(f'{R}─── Настройка сайта ───', justify="center")
+cn.print()
+cn.print(f'{E}   Название фильма: {Имя1}')
+cn.print(f'{E}   Возрастное ограничение: {Возраст1}')
+cn.print()
+cn.print(f'{E}   URL Изображения: {Изображение1}')
+cn.print(f'{E}   URL Информация: {Кнопка1}')
+cn.print(f'{E}   URL Видео: {Видео1}')
+cn.print()
+cn.print()
+cn.print(Pr_1, justify="center")
 while Имя in '':
-    cn.print(Pr_1, justify="center")
     cn.print(app._1_Name)
     Имя = cn.input(app._1_Input)
     if Имя == '':
         cn.print(f'{IA}   {E}└ {R}Это поле обязательно\n')
+        pass
     else:
+        Имя1 = Y + Имя
         cn.print(f"{IA}   {E}└ {D}Установлено значение: {Y}{Имя}\n")
-Возраст = ''
+        break
+
+os.system('cls')
+cn.print()
+cn.print(f'{R}─── Настройка сайта ───', justify="center")
+cn.print()
+cn.print(f'{E}   Название фильма: {Имя1}')
+cn.print(f'{E}   Возрастное ограничение: {Возраст1}')
+cn.print()
+cn.print(f'{E}   URL Изображения: {Изображение1}')
+cn.print(f'{E}   URL Информация: {Кнопка1}')
+cn.print(f'{E}   URL Видео: {Видео1}')
+cn.print()
+cn.print()
+cn.print(Pr_2, justify="center")
 while Возраст in '':
-    cn.print(Pr_2, justify="center")
     cn.print(app._2_Name)
     Возраст = cn.input(app._2_Input)
     if Возраст == '':
         Возраст = '0+'
-        cn.print(f"{IA}   {E}└ {D}Установлено значение: {Y}По умолчанию\n")
+        Возраст1 = f'{R}{Возраст} {B}По умолчанию'
         break
     elif Возраст in TAG1:
         Возраст = f'{Возраст}'
-        cn.print(f"{IA}   {E}└ {D}Установлено значение: {Y}{Возраст}\n")
+        Возраст1 = f'{R}{Возраст} {B}'
         break
     elif Возраст in TAG2:
         Возраст = f'{Возраст}+'
-        cn.print(f"{IA}   {E}└ {D}Установлено значение: {Y}{Возраст}\n")
+        Возраст1 = f'{R}{Возраст} {B}'
         break
     else:
         Возраст = '0+'
-        cn.print(f"{IA}   {E}└ {R}Ошибка автомачический выбор: {Y}По умолчанию\n")
-Изображение = ''
+        Возраст1 = f'{R}{Возраст} {B}По умолчанию'
+        break
+
+os.system('cls')
+cn.print()
+cn.print(f'{R}─── Настройка сайта ───', justify="center")
+cn.print()
+cn.print(f'{E}   Название фильма: {Имя1}')
+cn.print(f'{E}   Возрастное ограничение: {Возраст1}')
+cn.print()
+cn.print(f'{E}   URL Изображения: {Изображение1}')
+cn.print(f'{E}   URL Информация: {Кнопка1}')
+cn.print(f'{E}   URL Видео: {Видео1}')
+cn.print()
+cn.print()
+cn.print(Pr_3, justify="center")
 while Изображение in '':
-    cn.print(Pr_3, justify="center")
     cn.print(app._3_Name)
     Изображение = cn.input(app._3_Input)
     if Изображение == '':
         cn.print(f'{IA}   {E}└ {R}Это поле обязательно\n')
+        pass
     else:
-        if Изображение == '1':
-            cn.print(f"{IA}   {E}└ {D}Открытие проводника...")
-            Изображение =  easygui.fileopenbox()
-            cn.print(f"{IA}     {E}└ {D}Установлено значение: {Y}{Изображение}\n")
-            break   
-        if Изображение == '2':
-            Изображение = cn.input(app._33_Input)
-            cn.print(f"{IA}     {E}└ {D}Установлено значение: {Y}{Изображение}\n")
-            break        
-Кнопка = ''; Button = ''
+        Изображение1 = f'{Y}{Изображение} {B}'
+        cn.print(f"{IA}   {E}└ {D}Установлено значение: {Y}{Изображение}\n")
+        break
+
+os.system('cls')
+cn.print()
+cn.print(f'{R}─── Настройка сайта ───', justify="center")
+cn.print()
+cn.print(f'{E}   Название фильма: {Имя1}')
+cn.print(f'{E}   Возрастное ограничение: {Возраст1}')
+cn.print()
+cn.print(f'{E}   URL Изображения: {Изображение1}')
+cn.print(f'{E}   URL Информация: {Кнопка1}')
+cn.print(f'{E}   URL Видео: {Видео1}')
+cn.print()
+cn.print()
+cn.print(Pr_4, justify="center")
 while Кнопка in '':
-    cn.print(Pr_4, justify="center")
     cn.print(app._4_Name)
     Кнопка = cn.input(app._4_Input)
     if Кнопка == '':
+        button = ''
         Кнопка = 'Нет'
+        Кнопка1 = f'{Y}{Кнопка} {B}'
         cn.print(f"{IA}   {E}└ {D}Установлено значение: {Y}По умолчанию\n")
-        Кнопка = 'Нет информации'
-        break
     else:
+        Кнопка1 = f'{Y}{Кнопка} {B}'
         Button = f'<a class="buttonn" href="{Кнопка}" target="0">Информация</a>'
         cn.print(f"{IA}   {E}└ {D}Установлено значение: {Y}{Кнопка}\n")
-        break
-Видео = ''
 
+os.system('cls')
+cn.print()
+cn.print(f'{R}─── Настройка сайта ───', justify="center")
+cn.print()
+cn.print(f'{E}   Название фильма: {Имя1}')
+cn.print(f'{E}   Возрастное ограничение: {Возраст1}')
+cn.print()
+cn.print(f'{E}   URL Изображения: {Изображение1}')
+cn.print(f'{E}   URL Информация: {Кнопка1}')
+cn.print(f'{E}   URL Видео: {Видео1}')
+cn.print()
+cn.print()
+cn.print(Pr_5, justify="center")
 while Видео in '':
-    cn.print(Pr_5, justify="center")
     cn.print(app._5_Name)
     Видео = cn.input(app._5_Input)
     if Видео == '':
-        cn.print(f'{IA} {E}└ {R}Это поле обязательно\n')
+        cn.print(f'{IA}   {E}└ {R}Это поле обязательно\n')
     else:
+        Видео1 = f'{Y}{Видео} {B}'
         cn.print(f"{IA}   {E}└ {D}Установлено значение: {Y}{Видео}\n")
 
 # '            '
@@ -194,18 +221,21 @@ while Видео in '':
 #        }
 #    </style> 
 
-tt    = '    '
-
-class Format:
-    Content = (
-f'{tt}' + '<style>:root{' + '\n' +
-f'{tt}{tt}{tt}' + '--VName: '+ "'" + Имя + "'" + ';' + '\n' +
-f'{tt}{tt}{tt}' + '--VAge:  '+ "'" + Возраст + "'"+ ';' + '\n' +
-f'{tt}{tt}' + '}' + '\n' +
-f'' + '</style>'
-)
-
-code = (   
+code_conf = (
+TAB*1 + '<style>:root{' + '\n' +
+TAB*3 + '--VName: '+ "'" + Имя + "'" + ';' + '\n' +
+TAB*3 + '--VAge:  '+ "'" + Возраст + "'"+ ';' + '\n' +
+TAB*2 + '}' + '\n' +
+TAB*1 + '</style>')
+code_page = (f'''
+<section class="hero1"><div class="container"><div class="hero-inner"><div class="hero-copy"><div class="film">
+    <h1 class="name">{Имя}
+    <p class="number">{Возраст}</p></h1></div>
+    <div class="im"><img src="page/{num}/image.png" class="image" onerror="this.style.visibility = 'hidden'" width="170px" height = "250px"><div class="hero-cta">
+    <a class="buttonn"  href="page/{num}/">Смотреть</a>
+</section>
+''')
+code_film = (   
 f"""<!-- Форматирование -->
 <!DOCTYPE html>
 <html lang="ru" class="no-js">
@@ -258,12 +288,10 @@ f"""<!-- Форматирование -->
 
     <meta property="og:title" content="{Имя}">
     <title>ALED | {Имя}</title>
-{Format.Content}
+{code_conf}
 </section>
 
 </html>""")
-
-
 
 os.system('cls')
 print('   ')
@@ -275,10 +303,7 @@ for dirpath, dirnames, filenames in os.walk("./page"):
         pass
 nun = f'{num}      '
 num += 1
-cn.print(f'{R}┌─{E} Панель разработчка {R}────────────────────────────────────{R}{R}{R}┐', justify="center")
-cn.print(f'{R}│{W} Папок: {Y}{nun}                                         {W}{R}{R}{R}│', justify="center")
-cn.print(f'{R}└─────────────────────────────────────────────────────────{R}{R}{R}{R}{R}┘', justify="center")
-print()
+cn.print(Pr_App, justify="center")
 
 ____________________Имя = F'{Имя}                                                       '
 ________________Возраст = F'{Возраст}                                                   '
@@ -287,35 +312,30 @@ cn.print(f'{E}┌─────────────────────
 cn.print(f'{E}│{W} Название: {R}{R}{R}{R}{R}{____________________Имя[:45]} {Y}{Y}{Y}{E}│', justify="center")
 cn.print(f'{E}│{W} Возрасное ограниение: {R}{________________Возраст[:33]} {Y}{Y}{Y}{E}│', justify="center")
 cn.print(f'{E}└────────────────────────────────────────────────{Y} ID: {num} {E}─{E}{E}┘', justify="center")
-
-cn.print(f'{W}   URL Информация: {R}{R}{B}{Кнопка}')
-cn.print(f'{W}   URL Видео: {R}{R}{B}{Видео}')
+cn.print()
+cn.print(f'{W}   URL Информация: {B}{Кнопка}')
+cn.print(f'{W}   URL Видео: {B}{Видео}')
 cn.print()
 cn.print()
 
-newpath = f'./page/{num}' 
+# # Создать папку для фильма
+# DIR = f'./page/{PAGE}'
+# if not os.path.exists(DIR):
+#     os.makedirs(DIR)
 
-if not os.path.exists(newpath):
-    os.makedirs(newpath)
+# # Страница фильма
+# page = open(F"{DIR}/index.html", "w+", encoding='utf8')
+# page.write(code_film)
+# page.close()
 
-my_file = open(F"./page/{num}/index.html", "w+", encoding='utf8')
-my_file.write(code)
-my_file.close()
+# # Изображение
+# img =  open(f'{DIR}/image.png', 'wb')
+# img.write(requests.get(Изображение).content)
+# img.close()
 
-img_data = requests.get(Изображение).content
-with open(f'page/{num}/image.png', 'wb') as handler:
-    handler.write(img_data)
-
-with open('./index.html', 'r', encoding='utf8') as file:
-    data = file.readlines()
-    code = (f'''
-<section class="hero1"><div class="container"><div class="hero-inner"><div class="hero-copy"><div class="film">
-    <h1 class="name">{Имя}
-    <p class="number">{Возраст}</p></h1></div>
-    <div class="im"><img src="page/{num}/image.png" class="image" onerror="this.style.visibility = 'hidden'" width="170px" height = "250px"><div class="hero-cta">
-    <a class="buttonn"  href="page/{num}/">Смотреть</a>
-</section>
-''')
-data[50] = code + '\n'
-with open('index.html', 'w', encoding='utf8') as file:
-    file.writelines(data)
+# # Каталог фильмов
+# with open('./1index.html', 'r', encoding='utf8') as file:
+#     data = file.readlines()
+# data[50] = code_page + '\n'
+# with open('./1index.html', 'w', encoding='utf8') as file:
+#     file.writelines(data)
