@@ -234,14 +234,6 @@ while Видео in '':
 #        }
 #    </style> 
 
-
-
-Конфиг = (
-TAB*1 + '<style>:root{' + '\n' +
-TAB*3 + '--VName: '+ "'" + Имя + "'" + ';' + '\n' +
-TAB*3 + '--VAge:  '+ "'" + Возраст + "'"+ ';' + '\n' +
-TAB*2 + '}' + '\n' +
-TAB*1 + '</style>')
 Страница = (   
 f"""<!-- Форматирование -->
 <!DOCTYPE html>
@@ -288,14 +280,13 @@ f"""<!-- Форматирование -->
 <!-- каталог фильмов -->
 <section class="hero2"></section>
 
-<section class="hero1"><div class="container"><div class="hero-inner"><div class="hero-copy"><div class="film"><div class="name"><p class="number"></p></div></div><div class="im">
+<section class="hero1"><div class="container"><div class="hero-inner"><div class="hero-copy"><div class="film">
+    <div class="name">{Имя}<p class="number">{Возраст}</p></div></div><div class="im">
     <img src="image.png" class="image" onerror="this.style.visibility = 'hidden'" width="170px" height = "250px"><div class="hero-cta">
     {Button}</section><section class="hero1"><div class="container"><p class="buttonns"><p>
     <iframe class="fonv" src="{Видео}" frameborder="0" allowfullscreen></iframe></div></div></div>       
-
     <meta property="og:title" content="{Имя}">
     <title>ALED | {Имя}</title>
-{Конфиг}
 </section>
 
 </html>""")
