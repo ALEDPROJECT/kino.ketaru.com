@@ -38,7 +38,7 @@ FILE = 'image.png'
 
 class app:
     _1_Print  = f'{R}┌────────────────────────────────────{A*3}{E} Панель разработчка {R}─{R}┐'
-    _2_Print  = f'{R}│{W} Папок: {Y}{nun}                                            {O*2}{R}│'
+    _2_Print  = f'{R}│{W} Папок: {Y}{nun}                                           {O*2}{R}│'
     _3_Print  = f'{R}└───────────────────────────────────────────────────────────────{A*1}{R}┘'
     _4_Print  = f'{B} Для начала настройки сайта                          {Y}Нажмите: {D}Enter'
     _0_Input  = f''
@@ -85,7 +85,7 @@ class app:
 Формат_3   = (app._31_Print + '\n' + app._32_Print + '\n' + app._33_Print + '\n' + app._34_Print); Изображение = ''; Изображение1 = f'{B}-'
 Формат_4   = (app._41_Print + '\n' + app._42_Print + '\n' + app._43_Print + '\n' + app._44_Print); Кнопка = ''; Кнопка1 = f'{B}-'; Button = ''
 Формат_5   = (app._51_Print + '\n' + app._52_Print + '\n' + app._53_Print + '\n' + app._54_Print); Видео = ''; Видео1 = f'{B}-'
- 
+
 cn.print(Формат_App, justify="center")
 cn.input(app._0_Input, password=True)
 os.system('cls')
@@ -309,7 +309,7 @@ cn.print(f'{G}─── Фильм сгенерирован ───', justify=
 cn.print(f'{E}┌─────────────────────────────────────────────────────────{E}{E}{E}{E}{E}┐', justify="center")
 cn.print(f'{E}│{W} Название: {R}{R}{R}{R}{R}{____________________Имя[:45]} {Y}{Y}{Y}{E}│', justify="center")
 cn.print(f'{E}│{W} Возрасное ограниение: {R}{________________Возраст[:33]} {Y}{Y}{Y}{E}│', justify="center")
-cn.print(f'{E}└────────────────────────────────────────────────{Y} ID: {num} {E}─{E}{E}┘', justify="center")
+cn.print(f'{E}└───────────────────────────────────────────────{Y} ID: {num} {E}─{E}{E}┘', justify="center")
 cn.print()
 cn.print(f'{W}   URL Информация: {B}{Кнопка}')
 cn.print(f'{W}   URL Видео: {B}{Видео}')
