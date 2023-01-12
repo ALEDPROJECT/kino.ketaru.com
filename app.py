@@ -165,7 +165,7 @@ while True:
         Изображение1 = f'{D}Файл {B}По умолчанию'
         imgLOG = '1'
         break
-    if Изображение in ['1', 'file', 'File', 'FILE']:
+    if Изображение in ['1', 'file', 'File', 'FILE', 'файл', 'Файл', 'ФАЙЛ']:
         try:
             Изображение = filedialog.askopenfilename()
             FILE = Image.open(Изображение)  
@@ -321,9 +321,10 @@ if not os.path.exists(f'./{DIR}'):
     os.makedirs(f'./{DIR}')
 
 # Изменение каталога
+Строка = 50
 with open('./index.html', 'r', encoding='utf8') as Файл:
     lines = Файл.readlines()
-lines.insert(50, f'''
+lines.insert(Строка-2, f'''
 <section class="hero1"><div class="container"><div class="hero-inner"><div class="hero-copy"><div class="film">
     <h1 class="name">{Имя}
     <p class="number">{Возраст}</p></h1></div>
