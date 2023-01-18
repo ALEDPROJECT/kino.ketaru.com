@@ -330,7 +330,7 @@ lines.insert(Строка-2, f'''
     <h1 class="name">{Имя}
     <p class="number">{Возраст}</p></h1></div>
     <div class="im"><img src="page/{num}/image.png" class="image" onerror="this.style.visibility = 'hidden'" width="170px" height = "250px"><div class="hero-cta">
-    <a class="buttonn"  href="page/{num}/">Смотреть</a>
+    <a class="buttonn" href="page/{num}/">Смотреть</a>
 </section>
 ''')
 Файл = open('./index.html', 'w+', encoding='utf8')
