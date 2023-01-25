@@ -31,7 +31,7 @@
     border-color: #364758;
     border-radius: 5px;
 }
-
+/* background: #910500; */
 /* Название/ограниение */
 .name{
     line-height: 1.2;
@@ -44,13 +44,34 @@
 }
 .number {
     font-size: 15px;
-    background: #910500;
+    background: #243241;
+    border: 1px solid #364758;
     border-radius: 3px;
     position: relative;
     font-weight: 600;
     top: 7px;
     padding: 3px 10px;
     width: 45px;
+}
+
+/* Название/ограниение каталога */
+.items{
+    height: 107px;
+}
+.item1{
+    line-height: 1.2;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+}
+.item2 {
+    font-size: 15px;
+    background: #243241;
+    border: 1px solid #364758;
+    border-radius: 3px;
+    position: relative;
+    font-weight: 600;
+    padding: 3px 10px;
 }
 
 /* Изображение */

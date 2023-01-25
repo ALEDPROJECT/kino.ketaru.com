@@ -326,9 +326,9 @@ if not os.path.exists(f'./{DIR}'):
 with open('./index.html', 'r', encoding='utf8') as Файл:
     lines = Файл.readlines()
 lines.insert(Строка-2, f'''
-<section class="hero1"><div class="container"><div class="hero-inner"><div class="hero-copy"><div class="film">
-    <h1 class="name">{Имя}
-    <p class="number">{Возраст}</p></h1></div>
+<section class="hero1"><div class="container"><div class="hero-inner"><div class="hero-copy"><div class="film"><h1 class="items">
+    <span class="item1">{Имя}</span><p>
+    <span class="item2">{Возраст}</span></p></h1></div>
     <div class="im"><img src="page/{num}/image.png" class="image" onerror="this.style.visibility = 'hidden'" width="170px" height = "250px"><div class="hero-cta">
     <a class="buttonn" href="page/{num}/">Смотреть</a>
 </section>
