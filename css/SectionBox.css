@@ -137,7 +137,7 @@
 }
 
 /* Разрешение выделения текста */
-.name, .name:before{
+.item1, .item1:before{
     content: var(--VName);
     -webkit-user-select: text; -webkit-user-select: text;
     -khtml-user-select: text; -moz-user-select: text;
