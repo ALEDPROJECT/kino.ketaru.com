@@ -345,7 +345,7 @@ if imgLOG in '2':
     FILE = FILE.save(F'./{DIR}/image.png')
 if imgLOG in '3':
     FILE = open(f'./{DIR}/{FILE}', 'wb')
-    FILE.write(Данные)
+    FILE.write(eval('Данные'))
     FILE.close()
 
 # Страница фильма
