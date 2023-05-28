@@ -23,7 +23,7 @@ TAG1 = ['0+','6+','12+','16+','18+']
 TAG2 = ['0', '6', '12', '16', '18']
 
 print('   ')
-cn.print(f'{R}─── AledCreatik ───', justify="center")
+cn.print(f'{R}─── KetaruDev ───', justify="center")
 
 num = 0
 Файлов = 1
@@ -246,7 +246,7 @@ f"""<!-- Форматирование -->
         <meta name="yandex-verification" content="2d8c1dcb18ad48b7"/>
         
 <!-- Интеграция Embed -->
-<meta property="og:site_name" content="AledGG">
+<meta property="og:site_name" content="KetaRu">
 <link rel="shortcut icon" href="https://i.imgur.com/tPQs4ZD.png">
 <meta property="og:image:width" content="170">
 <meta property="og:image:height" content="250">
@@ -294,7 +294,7 @@ f"""<!-- Форматирование -->
 
 os.system('cls')
 print('   ')
-cn.print(f'{R}─── AledCreatik ───', justify="center")
+cn.print(f'{R}─── KetaruDev ───', justify="center")
 num = 0
 for dirpath, dirnames, filenames in os.walk("./page"):
     for dirname in dirnames:
