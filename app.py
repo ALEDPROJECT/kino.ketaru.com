@@ -287,7 +287,7 @@ f"""<!-- Форматирование -->
     {Button}</section><section class="hero1"><div class="container"><p class="buttonns"><p>
     <iframe class="fonv" src="{Видео}" frameborder="0" allowfullscreen></iframe></div></div></div>       
     <meta property="og:title" content="{Имя}">
-    <title>ALED | {Имя}</title>
+    <title>KetaRu | {Имя}</title>
 </section>
 
 </html>""")
