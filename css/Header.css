@@ -21,7 +21,7 @@
 
 /* Icon/Text/Version логотипа */
 .LogoName:before{
-    content: "ALED";
+    content: "KETA";
     background: url(https://i.imgur.com/K98MRfw.png);
     background-size: 25px;
     padding-left: 32px;
@@ -33,7 +33,7 @@
     color: #00ffea;
 }
 .LogoName:after{
-    content: 'GG';
+    content: 'RU';
     font-weight: 600;
     font-size: 15px;
     color: #ffef5b;
