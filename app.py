@@ -173,7 +173,7 @@ while True:
             Изображение1 = f'{D}Файл'
             imgLOG = '2'
             break
-        except:
+        except: 
             cn.print(f'{IA}   {E}└ {R}Файл не поддерживается\n')
     else:
         try:
