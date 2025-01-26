@@ -1,3 +1,4 @@
 @echo off
+:loop
 py app.py
-pause
+goto loop

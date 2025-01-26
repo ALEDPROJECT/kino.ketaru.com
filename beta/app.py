@@ -32,7 +32,7 @@ for dirpath, dirnames, filenames in os.walk("./page"):
     for dirname in dirnames:
         num += 1
         Файлов += 1
-nun = f'{num}     '
+nun = '{:<8}'.format(num)
 
 DIR = f'page/{Файлов}'
 FILE = 'image.png'
