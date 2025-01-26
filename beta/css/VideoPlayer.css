@@ -1,10 +1,10 @@
 .buttonns:before{
     content: 'Окно для просмотра';
     position: relative;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
     padding: 5px 0 3px 0;
-    border: 2px solid #374758;
-    background-color: #151c24;
+    border: 1px solid #1e293b;
+    background-color: #020817;
     display: inline-flex;
     text-decoration: none !important;
     color: #ffffff;
@@ -24,7 +24,7 @@
     max-height: 380px;
     min-height: 220px;
     background: #000000;
-    border: 2px solid #374758;
+    border: 1px solid #1e293b;
     border-radius: 0px 0px 5px 5px;
     animation: image 1s infinite;
 }

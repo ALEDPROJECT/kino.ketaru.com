@@ -24,12 +24,12 @@
 /* Дизайн секции */
 .hero-copy {
     padding: 15px;
-    height: 235px;
-    background-color: #141c24;
-    border-width: 2px;
+    height: 233px;
+    background-color: #020817;
+    border-width: 1px;
     border-style: solid;
-    border-color: #364758;
-    border-radius: 5px;
+    border-color: #1e293b;
+    border-radius: 3px;
 }
 /* background: #910500; */
 /* Название/ограниение */
@@ -41,17 +41,6 @@
     font-weight: 600;
     margin-top: 48px;
     margin-bottom: 16px
-}
-.number {
-    font-size: 15px;
-    background: #243241;
-    border: 1px solid #364758;
-    border-radius: 3px;
-    position: relative;
-    font-weight: 600;
-    top: 7px;
-    padding: 3px 10px;
-    width: 45px;
 }
 
 /* Название/ограниение каталога */
@@ -66,28 +55,41 @@
 }
 .item2 {
     font-size: 15px;
-    background: #243241;
-    border: 1px solid #364758;
+    background: #ffffff15;
+    border: 1px solid #ffffff15;
     border-radius: 3px;
     position: relative;
     font-weight: 600;
-    padding: 3px 10px;
+    padding: 2px 10px;
+}
+.number {
+    font-size: 15px;
+    background: #ffffff15;
+    border: 1px solid #ffffff15;
+    border-radius: 3px;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+    top: 8px;
+    padding: 2px 10px;
+    width: 45px;
 }
 
 /* Изображение */
 .im{
-    box-shadow: 5px 5px 4px #0e141a;
     top: -120px;
-    border-radius: 5px;
     height: 200px;
     width: 145px;
     background-color: #1d2935;
     position: relative;
-    animation: image 1s infinite;
+    border-radius: 5px;
 }
 .image{
-    box-shadow: 5px 5px 4px #0e141a;
-    border-radius: 5px;
+    border: 1px solid #2c3a50;
+    /* outline: 1px solid #2c3a50; */
+    /* outline-offset: -1px; */
+    /* box-shadow: 5px 5px 4px #0e141a; */
+    border-radius: 3px;
     height: 200px;
     width: 145px;
     background-color: #1d2935;
@@ -108,32 +110,20 @@
 /* Кнопка */
 .buttonn {
     position: relative;
-    border-radius: 5px;
-    background-color: #2c3a50;
+    border-radius: 3px;
+    background-color: #1e293b;
     padding: 6px 25px;
     display: inline-flex;
     text-decoration: none !important;
     color: #ffffff;
     font-weight: 600;
     cursor: pointer;
-    border-top: 2px solid #31435e;
-    border-left: 2px solid #31435e;
-    border-right: 0px solid #31435e;
-    border-bottom: 0px solid #2c3b51;
     left: 8px;
-    top: 5px;
+    top: 7px;
 }
 .buttonn:hover {
-    background-color: #31435e;
+    background-color: #182334;
     color: #ffffff;
-}
-
-/* Тени у объектов */
-.buttonn{
-    box-shadow: 5px 5px 4px var(--Shadow);
-}
-.buttonn:hover{
-    box-shadow: 2px 2px 1px var(--Shadow);
 }
 
 /* Разрешение выделения текста */
