@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 :root{
     --color1: #000820;
@@ -53,7 +54,8 @@ top: 282px;
 left: 50%;
 margin-top: -100px;
 margin-left: -400px;
-font-family: 'Quicksand', "Segoe UI";
+/* font-family: 'Quicksand', "Segoe UI"; */
+font-family: Rubik, serif;
 font-weight: 600;
 transition: 0.3s;
 }
@@ -75,7 +77,8 @@ text-shadow:
 0 0 0px rgb(255, 255, 255),
 0 0 20px rgb(255, 255, 255),
 0 0 150px rgb(255, 255, 255);
-font-family: 'Quicksand', "Comfortaa";
+/* font-family: 'Quicksand', "Comfortaa"; */
+font-family: Rubik, serif;
 text-align: center;
 font-weight: 400;
 font-size: 45px;

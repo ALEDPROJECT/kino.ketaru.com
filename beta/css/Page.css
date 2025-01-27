@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 html {
     box-sizing: border-box;
     font-size: 20px;
@@ -14,7 +15,8 @@ body {
 }
 body {
     background-color: var(--PageColor);
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: Rubik, serif;
+    /* font-family: "IBM Plex Sans", sans-serif; */
 }
 
 a {
@@ -74,7 +76,7 @@ p {
     padding: 0
 }
 .mt-0 {
-    margin-top: 0
+    margin-top: -11px;
 }
 .hero {
     text-align: center;
