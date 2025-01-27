@@ -1,9 +1,11 @@
 import os
-from rich import print; from rich.console import Console; cn = Console();
-from rich.traceback import install
+from tkinter import filedialog
+
 import requests
 from PIL import Image
-from tkinter import filedialog
+from rich.traceback import install
+
+from rich import print; from rich.console import Console; cn = Console();
 
 R = '[bold #e74856]' # 🔴| Красный
 Q = '[bold #E32636]' # 🔴| Ярко красный
@@ -258,7 +260,7 @@ f"""<!-- Форматирование -->
 
 <section class="hero1"><div class="container"><div class="hero-inner"><div class="hero-copy"><div class="film">
     <div class="name">{Имя}<p class="number">{Возраст}</p></div></div><div class="im">
-    <img src="image.png" class="image" onerror="this.style.visibility = 'hidden'" width="170px" height = "250px"><div class="hero-cta">
+    <img src="image.png" class="image" loading="lazy" onerror="this.style.visibility = 'hidden'" width="170px" height = "250px"><div class="hero-cta">
     {Button}</section><section class="hero1"><div class="container"><p class="buttonns"><p>
     <iframe class="fonv" src="{Видео}" frameborder="0" allowfullscreen></iframe></div></div></div>       
     <meta property="og:title" content="{Имя}">
@@ -302,7 +304,7 @@ lines.insert(Строка-2, f'''
 <section class="hero1"><div class="container"><div class="hero-inner"><div class="hero-copy"><div class="film"><h1 class="items">
     <span class="item1">{Имя}</span><p>
     <span class="item2">{Возраст}</span></p></h1></div>
-    <div class="im"><img src="page/{num}/image.png" class="image" onerror="this.style.visibility = 'hidden'" width="170px" height = "250px"><div class="hero-cta">
+    <div class="im"><img src="page/{num}/image.png" class="image" loading="lazy" onerror="this.style.visibility = 'hidden'" width="170px" height = "250px"><div class="hero-cta">
     <a class="buttonn" href="page/{num}/">Смотреть</a>
 </section>
 ''')
